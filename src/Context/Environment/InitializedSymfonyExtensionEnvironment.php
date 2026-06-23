@@ -54,6 +54,10 @@ final class InitializedSymfonyExtensionEnvironment implements SymfonyExtensionEn
     {
         $callable = $callee->getCallable();
 
+        if ($callable instanceof LateBoundContextMethodCallable) {
+            return $callable->bindTo($this->getContext($callable->contextClass));
+        }
+
         if (is_array($callable) && $callee->isAnInstanceMethod()) {
             return [$this->getContext($callable[0]), $callable[1]];
         }
