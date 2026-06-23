@@ -15,6 +15,7 @@ namespace FriendsOfBehat\SymfonyExtension\Context\Environment;
 
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\Exception\ContextNotFoundException;
+use Behat\Behat\Context\LateBoundContextMethodCallable;
 use Behat\Testwork\Call\Callee;
 use Behat\Testwork\Suite\Suite;
 use FriendsOfBehat\SymfonyExtension\Context\Environment\Handler\ContextServiceEnvironmentHandler;
